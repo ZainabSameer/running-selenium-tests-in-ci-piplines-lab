@@ -51,7 +51,7 @@ def test_blank_password_prevents_submit():
     try:
         driver.get("http://localhost:8000/signup")
         # TODO: Leave email blank
-        driver.find_element(By.ID, "name").send_keys("John Doe")
+        driver.find_element(By.ID, "name").send_keys("zainab sameer")
         # TODO: Submit form
         driver.find_element(By.CSS_SELECTOR, "button[type='submit']").click()
         # Check that form validation prevents submission by verifying form is still visible
@@ -66,8 +66,8 @@ def test_successful_signup_shows_thank_you():
     try:
         driver.get("http://localhost:8000/signup")
         # TODO: Fill form with valid data
-        driver.find_element(By.ID, "name").send_keys("John Doe")
-        driver.find_element(By.ID, "email").send_keys("john@example.com")
+        driver.find_element(By.ID, "name").send_keys("zainab sameer")
+        driver.find_element(By.ID, "email").send_keys("zainab@example.com")
         # TODO: Submit
         driver.find_element(By.CSS_SELECTOR, "button[type='submit']").click()
         # TODO: Check thank-you message with name
@@ -81,8 +81,8 @@ def test_form_resets_after_submit():
     try:
         driver.get("http://localhost:8000/signup")
         # TODO: Submit valid data
-        driver.find_element(By.ID, "name").send_keys("John Doe")
-        driver.find_element(By.ID, "email").send_keys("john@example.com")
+        driver.find_element(By.ID, "name").send_keys("zainab sameer")
+        driver.find_element(By.ID, "email").send_keys("zainab@example.com")
         driver.find_element(By.CSS_SELECTOR, "button[type='submit']").click()
         # TODO: Confirm fields reset
         assert driver.find_element(By.ID, "name").get_attribute("value") == ""
