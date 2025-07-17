@@ -71,7 +71,7 @@ def test_successful_signup_shows_thank_you():
         # TODO: Submit
         driver.find_element(By.CSS_SELECTOR, "button[type='submit']").click()
         # TODO: Check thank-you message with name
-        assert "Thanks for subscribing, John Doe!" in driver.find_element(By.ID, "message").text
+        assert "Thanks for subscribing, zanoob!" in driver.find_element(By.ID, "message").text
     finally:
         driver.quit()
 
