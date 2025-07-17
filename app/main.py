@@ -16,7 +16,7 @@ app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 class SignupForm(BaseModel):
     name: constr(min_length=1, max_length=100)
     email: EmailStr
-
+5
 
 @app.get("/signup", response_class=HTMLResponse)
 def get_signup_form():
